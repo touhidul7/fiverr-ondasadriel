@@ -6,12 +6,8 @@
         display:unset;
     }
     /* size navs to two rows */
-    nav div{
-        height: var(--big_nav_height);
-    }
-    /* size the three divs in main to acommodate the big nav */
-    main div{
-        height: calc(100vh - var(--big_nav_height));
+    :root{
+        --nav_height: 45px;
     }
     /* use seeable font */
     *{
@@ -25,13 +21,18 @@ But only in some browsers, so I won't fix it. */
 @media only screen and (max-width: 500px) and (min-width: 202px){ 
     /* to make place, as I can't use sticky when not in order */
     body{
-        padding-bottom: var(--big_nav_height);
+        padding-bottom: var(--nav_height);
     }
     nav{
         position: fixed;
         top:unset;
         bottom:0;
     }
+    /* .bar{
+        position: absolute;
+        top:unset;
+        bottom: 0;
+    } */
 }
 /* nav not sticky anymore on smartwatches*/
 @media only screen and (max-width: 201px) and (min-width: 60px){

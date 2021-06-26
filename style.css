@@ -1,0 +1,72 @@
+:root{
+    --small_nav_height: 30px;
+    --big_nav_height: 45px;
+}
+/* remove standard stuff */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+/* stick nav to top in desktop view */
+nav{
+    position: sticky;
+    top: 0;
+    display:flex;
+    width: 100%;
+}
+nav div{
+    display:flex;
+    justify-content: center;
+    height: var(--small_nav_height);
+}
+nav div, nav a{
+    width: 100%;
+}
+nav h1{
+    margin: auto auto;
+    font-size: 1em;
+    text-align: center;
+}
+main>div{
+    height: calc(100vh - var(--small_nav_height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* don't show the <br>s in desktopview */
+.breakpoint{
+    display:none;
+}
+/* apply colors */
+:root{
+    --color_about: #ECF87F;
+    --color_work: #81B622;
+    --color_contact: #59981A;
+    --color_text: #35490b;
+}
+@media (prefers-color-scheme: dark) {
+    :root{
+        --color_about: #3a520f;
+        --color_work: #29440d;
+        --color_contact: #1f2c05;
+        --color_text: #c7d16b;
+    }
+}
+.about{
+    background-color: var(--color_about);
+}
+.work{
+    background-color: var(--color_work);
+}
+.contact{
+    background-color: var(--color_contact);
+}
+h1, h2, p, a{
+    color: var(--color_text);
+}

@@ -1,0 +1,67 @@
+*{
+    margin:0;
+}
+.hide, .hide *{display:none;}
+body, html{
+    height:100%;
+    background-color: #000;
+}
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+/* Alert window */
+.success{background-color:#3aa74eaa;}
+.fail{background-color:#aa3333aa;}
+
+.fail, .success{
+    backdrop-filter: blur(10px);
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.softfail{
+    position:absolute;
+    top:calc(50vh - 5%);
+    left:calc(50vw - 5%);
+    background-color:#aa6f00dd;
+}
+#alert{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#alert p{
+    height:fit-content;
+    font-size:2em;
+    font-weight:bolder;
+    padding:1em;
+    border-radius:1em;
+    font-family:sans-serif;
+    text-align:center;
+}
+/* video window */
+#scanRegion{
+    width: 100vmin;
+    height: 100vmin;
+}
+#scanRegion canvas{
+    width: 100%;
+    height: 100%;
+}
+/* for printing */
+#cards{
+    width: 794px;
+}
+.card{
+    background: linear-gradient(75deg, black 0%, rgba(20,17,47,1) 30%, rgba(0,153,213,1) 100%);
+    width: 100%;
+    height: 374px;
+}
+/* QR-Code */
+.card canvas{
+    margin-left:10px;
+}

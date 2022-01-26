@@ -98,3 +98,9 @@ form{
 .card canvas{
     margin-left:10px;
 }
+
+@media only screen and (max-width: 500px){
+    #createCards{
+        display:none;
+    }
+}

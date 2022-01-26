@@ -61,10 +61,10 @@ form{
 }
 .softfail{
     position:absolute;
-    top:calc(50vh - 5%);
-    left:calc(50vw - 5%);
+    top:auto;
+    left:auto;
     background-color:#aa6f00dd;
-    border-radius:2em;
+    border-radius:1em;
 }
 #alert{
     display:flex;

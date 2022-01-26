@@ -20,16 +20,17 @@ and scrolling up shows the url-bar, which shifts everything down.
 But only in some browsers, so I won't fix it. */
 @media only screen and (max-width: 500px) and (min-width: 202px){ 
     /* to make place, as I can't use sticky when not in order */
-    body{
+    /* body{
         padding-bottom: var(--nav_height);
-    }
-    nav{
+    } */
+    /* nav{
         position: fixed;
         top:unset;
         bottom:0;
-    }
+    } */
     /* .bar{
-        position: absolute;
+        display:none;
+        position: fixed;
         top:unset;
         bottom: 0;
     } */

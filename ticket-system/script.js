@@ -25,6 +25,11 @@ document.getElementById("password").value=storedPw;
 if(sessionStorage.getItem("scanner")=="true" && storedPw) {
     onScan();
 }
+// fill in correct next possible card
+const lastUsedNonce=parseInt(localStorage.getItem("lastUsedNonce"))|0;
+form.elements["from"].value=lastUsedNonce+1;
+form.elements["to"].value=lastUsedNonce+3;
+
 const scan=document.getElementById('scan');
 scan.addEventListener("click", ()=>{onScan()});
 
@@ -50,8 +55,9 @@ function onCreate(){
     } else {
         const from=form.elements["from"].value;
         const to=form.elements["to"].value;
-        const lastUsedNonce=localStorage.getItem("lastUsedNonce")|0;
+        const lastUsedNonce=parseInt(localStorage.getItem("lastUsedNonce"))|0;
         if(from<=lastUsedNonce)alert(`already used this range\nnext usable nonce is ${lastUsedNonce+1}`);
+        else if(from>to)alert("from has to be smaller than to");
         else{
             form.className='hide';
             createCards(from,to,password);

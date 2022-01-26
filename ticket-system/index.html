@@ -7,10 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="canvas.ico">
   <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src='./qrcodegenerator.js'></script>
+  <script type="text/javascript" src='./libraries/qrcodegenerator.js'></script>
 </head>
 
 <body id="body">
+  <form id="betterForm">
+    <label for="password">password:</label>
+    <br>
+    <input name="password" type="password" id="password" class="input">
+    <br>
+    <input type="button" id="scan" value="scan" class="button">
+    <hr>
+    <label>Create cards from to</label>
+    <br>
+    <div id="fromto">  
+      <input type="number" name="from" id="from" value="1" class="input">
+      <input type="number" name="to" id="to" value="10" class="input">
+    </div>
+    <input type="button" id="create" value="create" class="button">
+  </form>
   <video id="video" class="hide"></video>
   <div id="scanRegion" class="hide"></div>
   <div id="alert" class="hide">

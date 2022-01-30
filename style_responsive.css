@@ -13,6 +13,9 @@
     *{
         font-weight: normal;
     }
+    footer{
+        flex-direction:column;
+    }
 }
 /* nav on bottom on phones*/
 /* does not work as expected, as vh isn't properly defined on mobile, 
@@ -41,4 +44,8 @@ But only in some browsers, so I won't fix it. */
         position:unset;
         flex-direction: column;
     }
+    .bar{
+        position:unset;
+    }
+    
 }

@@ -108,3 +108,10 @@ a{
 h1, h2, p{
     color: var(--color_text);
 }
+footer{
+    padding:var(--padding);
+    background-color: var(--color_about);
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}

@@ -66,28 +66,21 @@ main>div>p:first-of-type{
 }
 /* apply colors */
 :root{
-    --color_1: #ECF87F;
-    --color_2: #85b924;
-    --color_3: #41740f;
-    --color_4: #2d500b;
-    --color_5: #161d08;
-}
-:root{
-    --color_about: var(--color_1);
-    --color_abilities: var(--color_2);
-    --color_work: var(--color_3);
-    --color_contact: var(--color_4);
-    --color_text: var(--color_5);
-    --color_link: #1a85af;
+    --color_about: #ECF87F;
+    --color_abilities: #bce078;
+    --color_work: #98d15f;
+    --color_contact: #7bb145;
+    --color_text: #161d08;
+    --color_link: #0a6b1c;
 }
 @media (prefers-color-scheme: dark) {
     :root{
-        --color_about: var(--color_5);
-        --color_abilities: var(--color_4);
-        --color_work: var(--color_3);
-        --color_contact: var(--color_2);
-        --color_text: var(--color_1);
-        --color_link: #21ade4;
+        --color_about: #161d08;
+        --color_abilities: #2d500b;
+        --color_work: #41740f;
+        --color_contact: #61861b;
+        --color_text: #ECF87F;
+        --color_link: #99ffa0;
     }
 }
 a{

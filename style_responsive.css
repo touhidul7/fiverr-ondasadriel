@@ -17,11 +17,12 @@
         flex-direction:column;
     }
 }
+
 /* nav on bottom on phones*/
 /* does not work as expected, as vh isn't properly defined on mobile, 
 and scrolling up shows the url-bar, which shifts everything down. 
 But only in some browsers, so I won't fix it. */
-@media only screen and (max-width: 500px) and (min-width: 202px){ 
+@media only screen and (max-width: 500px) and (min-width: 271px){ 
     /* to make place, as I can't use sticky when not in order */
     /* body{
         padding-bottom: var(--nav_height);
@@ -39,13 +40,35 @@ But only in some browsers, so I won't fix it. */
     } */
 }
 /* nav not sticky anymore on smartwatches*/
-@media only screen and (max-width: 201px) and (min-width: 60px){
+@media only screen and (max-width: 270px){
+    .breakpoint{
+        display:none;
+    }
+    :root{
+        --nav_height: 30px;
+    }
     nav{
         position:unset;
         flex-direction: column;
+    }
+    nav div{
+        border-radius:unset;
     }
     .bar{
         position:unset;
     }
     
+}
+@media only screen and (max-width: 150px){
+    :root{
+        --padding:0;
+    }
+}
+@media only screen and (max-width: 80px){
+    :root{
+        --nav_height: 45px;
+    }
+    .breakpoint{
+        display:unset;
+    }
 }

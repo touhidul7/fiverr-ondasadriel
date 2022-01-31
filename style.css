@@ -25,7 +25,16 @@ nav div{
     display:flex;
     justify-content: center;
     height: var(--nav_height);
+    border-bottom-left-radius:calc(var(--padding) / 2);
+    border-bottom-right-radius:calc(var(--padding) / 2);
 }
+nav a:first-of-type div{
+    border-bottom-left-radius:0;
+}
+nav a:last-of-type div{
+    border-bottom-right-radius:0;
+}
+
 nav div, nav a{
     width: 100%;
 }
@@ -41,9 +50,8 @@ nav h1{
     top:0;
 }
 main>div{
-    border-top: 30px solid #000;
     padding: 0 var(--padding);
-    min-height: calc(100vh - var(--nav_height));
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,15 +104,12 @@ a{
 }
 .abilities{
     background-color: var(--color_abilities);
-    border-color: var(--color_about);
 }
 .work{
     background-color: var(--color_work);
-    border-color: var(--color_abilities);
 }
 .contact{
     background-color: var(--color_contact);
-    border-color: var(--color_work);
 }
 h1, h2, p{
     color: var(--color_text);

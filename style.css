@@ -55,10 +55,7 @@ main>div{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-main>div:last-of-type{
-    padding-bottom: var(--nav_height);
-    min-height: 100vh;
+    /* padding-bottom: var(--nav_height); */
 }
 main>div>p{
     padding: var(--padding) 0;

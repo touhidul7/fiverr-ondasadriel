@@ -49,27 +49,34 @@ nav h1{
     position:sticky;
     top:0;
 }
-main>div{
+.content{
     padding: 0 var(--padding);
-    min-height: 100vh;
+    min-height: calc(100vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* padding-bottom: var(--nav_height); */
+    padding-bottom: calc(var(--padding) + var(--nav_height));
+    margin-left:auto;
+    margin-right:auto;
+    max-width:700px;
 }
-main>div>p{
+/* .content:last-of-type{
+    padding-bottom:unset;
+} */
+.content>p{
     padding: var(--padding) 0;
     border-top: var(--color_text);
     border-top-style: solid;
     border-top-width: 1px;
 }
-main>div>p:first-of-type{
+.content>p:first-of-type{
     padding-top: 0;
     border-top: none;
 }
-/* main>div>p:last-of-type{
-    padding-bottom: calc(var(--padding) + var(--nav_height));
-} */
+strong{
+    font-weight:bold;
+}
+
 /* don't show the <br>s in desktopview */
 .breakpoint{
     display:none;

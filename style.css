@@ -125,3 +125,27 @@ footer{
     flex-direction:row;
     justify-content:space-between;
 }
+/* width */
+::-webkit-scrollbar {
+    width: var(--padding);
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, 
+    var(--color_about) 0%, 
+    var(--color_about) 23%,
+    var(--color_abilities) 23%, 
+    var(--color_abilities) 46%, 
+    var(--color_work) 46%,
+    var(--color_work) 69%,
+    var(--color_contact) 69%,
+    var(--color_contact) 92%,
+    var(--color_about) 92%, 
+    var(--color_about) 100%);
+    
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    /* border-radius:10px; */
+    background: var(--color_text);
+}

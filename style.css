@@ -20,6 +20,8 @@ nav {
   top: 0;
   display: flex;
   width: 100%;
+  gap: 0.5px;
+  /* color: #202020; */
 }
 nav div {
   display: flex;
@@ -89,10 +91,10 @@ strong {
 @media (prefers-color-scheme: dark) {
   :root {
     --color_about: #161d08;
-    --color_abilities: #2d500b;
-    --color_work: #41740f;
-    --color_contact: #61861b;
-    --color_text: #ecf87f;
+    --color_abilities: #161d08/* #2d500b */;
+    --color_work: #161d08/* #41740f */;
+    --color_contact: #161d08/* #61861b */;
+    --color_text: #fff/* #ecf87f */;
     --color_link: #99ffa0;
   }
 }

@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function applyDarkMode() {
-        document.documentElement.style.setProperty('--color_about', '#161d08');
-        document.documentElement.style.setProperty('--color_abilities', '#2d500b');
-        document.documentElement.style.setProperty('--color_work', '#41740f');
-        document.documentElement.style.setProperty('--color_contact', '#61861b');
-        document.documentElement.style.setProperty('--color_text', '#ecf87f');
-        document.documentElement.style.setProperty('--color_link', '#99ffa0');
+        document.documentElement.style.setProperty('--color_about', '#000000'); //('--color_about', '#161d08')
+        document.documentElement.style.setProperty('--color_abilities', '#202020'); //('--color_abilities', '#2d500b')
+        document.documentElement.style.setProperty('--color_work', '#000000'); //('--color_work', '#41740f')
+        document.documentElement.style.setProperty('--color_contact', '#202020'); //('--color_contact', '#61861b')
+        document.documentElement.style.setProperty('--color_text', '#ecf87f'); //('--color_text', '#ecf87f')
+        document.documentElement.style.setProperty('--color_link', '#99ffa0'); //('--color_link', '#99ffa0')
     }
     
     function applyLightMode() {

@@ -101,6 +101,9 @@ strong {
     --color_link: #99ffa0;
   }
 }
+nav a h1{
+    color: #ECF87F !important;
+}
 a {
   color: var(--color_link);
 }

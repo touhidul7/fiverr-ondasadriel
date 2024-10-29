@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function applyLightMode() {
-        document.documentElement.style.setProperty('--color_about', '#ecf87f');
-        document.documentElement.style.setProperty('--color_abilities', '#bce078');
-        document.documentElement.style.setProperty('--color_work', '#98d15f');
-        document.documentElement.style.setProperty('--color_contact', '#7bb145');
-        document.documentElement.style.setProperty('--color_text', '#161d08');
-        document.documentElement.style.setProperty('--color_link', '#0a6b1c');
+        document.documentElement.style.setProperty('--color_about', '#ffffff'); //#ecf87f
+        document.documentElement.style.setProperty('--color_abilities', '#dadada'); //#bce078
+        document.documentElement.style.setProperty('--color_work', '#ffffff'); //#98d15f
+        document.documentElement.style.setProperty('--color_contact', '#dadada'); //#7bb145
+        document.documentElement.style.setProperty('--color_text', '#161d08'); //#161d08
+        document.documentElement.style.setProperty('--color_link', '#0a6b1c'); //#0a6b1c
     }
 });

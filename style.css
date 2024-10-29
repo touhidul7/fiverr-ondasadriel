@@ -21,7 +21,7 @@ nav {
   display: flex;
   width: 100%;
   gap: 0.5px;
-  /* color: #202020; */
+  /* color: #e9e9e9; */
 }
 nav div {
   display: flex;
@@ -91,15 +91,15 @@ strong {
 @media (prefers-color-scheme: dark) {
   :root {
     --color_about: #161d08;
-    --color_abilities: #161d08/* #2d500b */;
-    --color_work: #161d08/* #41740f */;
-    --color_contact: #161d08/* #61861b */;
-    --color_text: #fff/* #ecf87f */;
+    --color_abilities: #161d08;
+    --color_work: #161d08;
+    --color_contact: #161d08;
+    --color_text: #fff;
     --color_link: #99ffa0;
   }
 }
 nav a h1{
-    color: #ECF87F !important;
+    color: var(--color_text) !important;
 }
 a {
   color: var(--color_link);
@@ -151,11 +151,16 @@ footer {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--color_text);
+  background: var(--color_about);
+  /* background: #2a2a2a; */
 }
 
 /* -------------- Making the scroll smooth  -------------------- */
 
 html {
   scroll-behavior: smooth;
+}
+/* adding transition on tab color change-- */
+.about-tab, .abilities-tab, .work-tab, .contact-tab {
+  transition: background-color 0.3s ease; 
 }

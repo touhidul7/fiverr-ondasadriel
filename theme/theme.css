@@ -43,12 +43,12 @@
     border-radius: 50%;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: rgb(230, 230, 230);
     transition: 0.4s;
   }
   
   input:checked + .slider {
-    background-color: #2196f3;
+    background-color:#003b6c;
   }
   
   input:checked + .slider:before {

@@ -1,74 +1,111 @@
 /* mobile */
-@media only screen and (max-width: 500px){
-    /* show the <br>s in nav in mobileview */
-    /* (split navs into two rows) */
-    .breakpoint{
-        display:unset;
-    }
-    /* size navs to two rows */
-    :root{
-        --nav_height: 45px;
-    }
-    /* use seeable font */
-    *{
-        font-weight: normal;
-    }
-    footer{
-        flex-direction:column;
-    }
+@media only screen and (max-width: 500px) {
+  /* show the <br>s in nav in mobileview */
+  /* (split navs into two rows) */
+  .breakpoint {
+    display: unset;
+  }
+
+  /* size navs to two rows */
+  :root {
+    --nav_height: 45px;
+  }
+  /* use seeable font */
+  * {
+    font-weight: normal;
+  }
+  footer {
+    flex-direction: column;
+  }
 }
 
 /* nav on bottom on phones*/
 /* does not work as expected, as vh isn't properly defined on mobile, 
 and scrolling up shows the url-bar, which shifts everything down. 
 But only in some browsers, so I won't fix it. */
-@media only screen and (max-width: 500px) and (min-width: 271px){ 
-    /* to make place, as I can't use sticky when not in order */
-    /* body{
-        padding-bottom: var(--nav_height);
-    } */
-    /* nav{
-        position: fixed;
-        top:unset;
-        bottom:0;
-    } */
-    /* .bar{
-        display:none;
-        position: fixed;
-        top:unset;
-        bottom: 0;
-    } */
+@media only screen and (max-width: 500px) and (min-width: 271px) {
 }
 /* nav not sticky anymore on smartwatches*/
-@media only screen and (max-width: 270px){
-    .breakpoint{
-        display:none;
-    }
-    :root{
-        --nav_height: 30px;
-    }
-    nav{
-        position:unset;
-        flex-direction: column;
-    }
-    nav div{
-        border-radius:unset;
-    }
-    .bar{
-        position:unset;
-    }
+@media only screen and (max-width: 270px) {
+  .breakpoint {
+    display: none;
+  }
+  :root {
+    --nav_height: 30px;
+  }
+  nav {
+    position: fixed;
+    bottom: 0;
+    align-items: end;
+    flex-direction: column;
+  }
+  nav div {
+    border-radius: unset;
+  }
+  .bar {
+    position: unset;
+  }
+}
+@media only screen and (max-width: 150px) {
+  :root {
+    --padding: 0;
+  }
+}
+@media only screen and (max-width: 80px) {
+  :root {
+    --nav_height: 45px;
+  }
+  .breakpoint {
+    display: unset;
+  }
+}
+
+/* /////////////////////////////////////
+----------Developepr Code-----
+///////////////////////////////////////// */
+
+@media (max-width: 768px) {
     
+  /* stick nav to bottom in mobile view-- */
+  nav {
+    z-index: 10;
+    position: fixed !important;
+    bottom: 0 !important;
+    align-items: end;
+    margin-bottom: 15px;
+  }
+  
+  /* bottom nav style-- */
+  nav div {
+    display: flex;
+    justify-content: center;
+    height: var(--nav_height);
+    border-top-left-radius: calc(var(--padding) / 2);
+    border-top-right-radius: calc(var(--padding) / 2);
+    /* remove bottom radius */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    
+  }
+  nav a:first-of-type div {
+    border-top-left-radius: 0;
+    /* remove bottom radius */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  nav a:last-of-type div{
+    border-top-right-radius:0;
+    /* remove bottom radius */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
-@media only screen and (max-width: 150px){
-    :root{
-        --padding:0;
-    }
+.theme-btn {
+    position: fixed;
+    margin-right: 10px;;
+    top: 0;
+    right: 0;
+  }
+footer{
+    padding-bottom: 100px;
 }
-@media only screen and (max-width: 80px){
-    :root{
-        --nav_height: 45px;
-    }
-    .breakpoint{
-        display:unset;
-    }
 }

@@ -31,9 +31,9 @@ nav div{
 nav a:first-of-type div{
     border-bottom-left-radius:0;
 }
-nav a:last-of-type div{
+/* nav a:last-of-type div{
     border-bottom-right-radius:0;
-}
+} */
 
 nav div, nav a{
     width: 100%;

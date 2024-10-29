@@ -149,3 +149,9 @@ footer{
     /* border-radius:10px; */
     background: var(--color_text);
 }
+
+
+/* ---------------------------------- */
+html {
+    scroll-behavior: smooth;
+}

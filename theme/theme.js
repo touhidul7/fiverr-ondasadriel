@@ -1,13 +1,25 @@
+
+/* Theme Button Function ////////////////////////////////////// */
+
 document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('darkModeToggle');
 
-    // Load user preference from localStorage
-    const savedMode = localStorage.getItem('dark-mode') === 'true';
-    if (savedMode) {
+    // Check for user's device preference and apply theme accordingly
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const savedMode = localStorage.getItem('dark-mode');
+
+    if (savedMode === 'true') {
+        applyDarkMode();
+        toggle.checked = true;
+    } else if (savedMode === 'false') {
+        applyLightMode();
+        toggle.checked = false;
+    } else if (prefersDarkScheme) {  // If there's no saved mode, use device preference
         applyDarkMode();
         toggle.checked = true;
     } else {
-        applyLightMode(); // Ensure light mode is applied if not dark mode
+        applyLightMode();
+        toggle.checked = false;
     }
 
     // Toggle dark mode
@@ -30,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.style.setProperty('--color_link', '#99ffa0');
     }
     
-    // Function to apply light mode
     function applyLightMode() {
         document.documentElement.style.setProperty('--color_about', '#ecf87f');
         document.documentElement.style.setProperty('--color_abilities', '#bce078');

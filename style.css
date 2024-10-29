@@ -31,9 +31,6 @@ nav div {
 nav a:first-of-type div {
   border-bottom-left-radius: 0;
 }
-/* nav a:last-of-type div{
-    border-bottom-right-radius:0;
-} */
 
 nav div,
 nav a {
@@ -61,9 +58,7 @@ nav h1 {
   margin-right: auto;
   max-width: 700px;
 }
-/* .content:last-of-type{
-    padding-bottom:unset;
-} */
+
 .content > p {
   padding: var(--padding) 0;
   border-top: var(--color_text);
@@ -154,12 +149,10 @@ footer {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  /* border-radius:10px; */
   background: var(--color_text);
 }
 
-/* -------------- Developer Code  -------------------- */
-
+/* -------------- Making the scroll smooth  -------------------- */
 
 html {
   scroll-behavior: smooth;

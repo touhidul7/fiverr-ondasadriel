@@ -20,9 +20,6 @@
 }
 
 /* nav on bottom on phones*/
-/* does not work as expected, as vh isn't properly defined on mobile, 
-and scrolling up shows the url-bar, which shifts everything down. 
-But only in some browsers, so I won't fix it. */
 @media only screen and (max-width: 500px) and (min-width: 271px) {
 }
 /* nav not sticky anymore on smartwatches*/
@@ -82,8 +79,6 @@ But only in some browsers, so I won't fix it. */
     justify-content: center;
     height: var(--nav_height);
     border-radius: 0;
-    /* border-top-left-radius: calc(var(--padding) / 2);
-    border-top-right-radius: calc(var(--padding) / 2); */
     /* remove bottom radius */
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -101,12 +96,13 @@ But only in some browsers, so I won't fix it. */
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
+/* mak the theme button fixed on top- */
 .theme-btn {
     position: fixed;
     margin-right: 10px;;
     top: 0;
     right: 0;
-  }
+}
 footer{
     padding-bottom: 100px;
 }

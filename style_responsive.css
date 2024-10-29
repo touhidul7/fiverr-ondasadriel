@@ -73,6 +73,7 @@ But only in some browsers, so I won't fix it. */
     bottom: 0 !important;
     align-items: end;
     margin-bottom: 15px;
+    gap: 2px;
   }
   
   /* bottom nav style-- */
@@ -80,8 +81,9 @@ But only in some browsers, so I won't fix it. */
     display: flex;
     justify-content: center;
     height: var(--nav_height);
-    border-top-left-radius: calc(var(--padding) / 2);
-    border-top-right-radius: calc(var(--padding) / 2);
+    border-radius: 0;
+    /* border-top-left-radius: calc(var(--padding) / 2);
+    border-top-right-radius: calc(var(--padding) / 2); */
     /* remove bottom radius */
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;

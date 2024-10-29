@@ -1,16 +1,30 @@
-  /* -------------------------- Colors for dark Mode---------------------- */
+/* 
+    -to use the dark theme in a section just add the id name "theme" to the element
+
+    -to add custom styles for theme to any section just folow this stracture:
+
+        .parentclass .dark-mode{
+            --add styles here--
+        }
+
+    -the default dark theme style is given below
+
+*/  
+  
+  
+  /* -------------------------- Add styles for dark mode here------------------------ */
 
 .dark-mode{
     background-color: black !important;
     color: white !important;
 }
 
-  /* -------------------------- Colors for dark Mode Ends here---------------------- */
+/* -------------------------- Colors for dark Mode Ends here---------------------- */
 
 
 
 
-/* Toggle switch styles */
+/* Togle button styles-------------------------- */
 .theme-btn{
     width: fit-content;
     display: flex;
